@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="in">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Register Staff Universe BIMA 2024">
+    <meta property="og:description" content="Register Staff Universe BIMA 2024, jangan sampai kelewatan!">
+    <meta name="keywords" content="universebima, Universe Bima, Bima">
+    <meta property="og:image" content="https://i.imgur.com/NyHC2A0.png">
+    <link rel="shortcut icon" href="https://i.imgur.com/nbqLMle.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/55100b01de.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <title>Register</title>
+</head>
+<body>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Aladin&family=Asap&family=Audiowide&family=Lemon&family=Nunito&family=Protest+Revolution&display=swap');
+        body {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background: url('https://i.imgur.com/nbqLMle.png');
+            background-position: center;
+            background-size: cover;
+        }
+        
+        .reportdiv {
+        box-shadow: 0px 0px 10px #000;
+        color: #fff;
+        border-radius: 10px;
+        margin: 20px;
+        padding: 20px;
+        width: 80%;
+        height: 70%;
+        overflow: scroll;
+        backdrop-filter: blur(10px);
+    }
+    
+    .reportdiv > form > .namaform {
+        width: 90%;
+        padding: 10px;
+        border: 2px solid #2d2d2d;
+        margin: 10px;
+        border-radius: 10px;
+        outline: none;
+    }
+    
+    .reportdiv > form > .emailform {
+        width: 90%;
+        padding: 10px;
+        border: 2px solid #2d2d2d;
+        margin: 10px;
+        border-radius: 10px;
+        outline: none;
+    }
+    
+    .reportdiv > form > .nomorform {
+        width: 90%;
+        padding: 10px;
+        border: 2px solid #2d2d2d;
+        margin: 10px;
+        border-radius: 10px;
+        outline: none;
+    }
+    
+    .reportdiv > form > .fileform {
+        width: 90%;
+        padding: 10px;
+        border: 2px solid #2d2d2d;
+        margin-top: 10px;
+        border-radius: 10px;
+        background: #fff;
+        color: #111;
+        font-family: 'Lemon', serif;
+    }
+    
+    #preview img {
+        max-width: 150px;
+        max-height: 300px;
+        margin-top: 50px;
+        border: 2px solid #000;
+        box-shadow: 0px 0px 10px #fff;
+    }
+    
+    .reportdiv > form > .textareaform {
+        width: 90%;
+        height: 100px;
+        padding: 10px;
+        border: 2px solid #333;
+        margin: 10px;
+        border-radius: 10px;
+        outline: none;
+        box-shadow: 0px 0px 10px #fff;
+    }
+    
+    .reportdiv > form > .submitform {
+        width: 90%;
+        padding: 10px;
+        border: 2px solid #2d2d2d;
+        margin: 10px;
+        border-radius: 10px;
+        outline: none;
+        background: #fff;
+        color: #111;
+        font-family: 'Lemon', serif;
+    }
+    
+    .inputradiodiv {
+        background: #ffffff43;
+        margin : 10px;
+        border-radius: 10px;
+        aligh-item: center;
+        height: 50px;
+        padding: 50px;
+    }
+    
+    .inputradiodiv > label {
+        display: block;
+    }
+    
+    input[type="radio"] {
+        display: none;
+    }
+    
+    .button {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 10px 100px;
+        border: 2px solid #2d2d2d;
+        margin: 10px;
+        border-radius: 10px;
+        background: #fff;
+        color: #111;
+        font-family: 'Lemon', serif;
+    }
+    </style>
+    
+    
+    <div style="display: block;" id="formContainer" class="reportdiv">
+        <img style="width: 100px; border-radius:15px;" src="https://i.imgur.com/nbqLMle.png" alt="Bima">
+        <h1 style="color: #fff; font-family: 'Audiowide', sans-serif;">Pemilu Bima 2024</h1>
+        <p style="font-size: 10px; color: #fff; font-family: 'Nunito', sans-serif;">Halo para calon staf, isi formulir dan mari daftar</p>
+        <form id="myform" action="https://formspree.io/f/xyyrwnkg" method="POST">
+            <input class="namaform" type="text" name="nama" placeholder="Masukkan Nama...">
+            <input class="namaform" type="text" name="namanegaraform" placeholder="Masukkan Nama Negara...">
+            <input class="namaform" type="text" name="namauniverseform" placeholder="Masukkan Nama Universe...">
+            <input class="emailform" type="email" name="emailform" placeholder="Masukkan Email...">
+            <div id="inputradiodiv1" class="inputradiodiv" onclick="checkRadio(1)">
+                <input class="pemilihanform" type="radio" name="pemilihanform" value="Republik England & Republik FlyFrost" id="pemilihanform01">
+                <label for="pemilihanform01">Republik England & Republik FlyFrost</label>
+            </div>
+            <div id="inputradiodiv2" class="inputradiodiv" onclick="checkRadio(2)">
+                <input class="pemilihanform" type="radio" name="pemilihanform" value="Republik Bornesia & Union The Taipon" id="pemilihanform02">
+                <label for="pemilihanform02">Republik Bornesia & Union The Taipon</label>
+            </div>
+            <input onclick="submitForm()" class="submitform" type="submit" value="Pilih?">
+        </form>
+    </div>
+    
+    <div style="display: none;" id="tampilanSetelahKirim" class="reportdiv">
+        <h1 style="color: #fff; font-family: 'Audiowide', sans-serif;"> THANKS <i style="color: #ff4040" class="fa fa-heart"></i></h1>
+        <p style="font-size: 10px; color: #fff; font-family: 'Nunito', sans-serif;">Anda telah mengirim form, anda akan bisa mengirim lagi setelah 3 hari, terima kasih telah mencoblos!</p>
+        <button class="button">Keluar</button>
+    </div>
+    
+    <script>
+    function checkRadio(divNumber) {
+        var div1 = document.getElementById('inputradiodiv1');
+        var div2 = document.getElementById('inputradiodiv2');
+        
+        if (divNumber === 1) {
+            div1.style.backgroundColor = '#00095991';
+            div2.style.backgroundColor = '';
+        } else if (divNumber === 2) {
+            div2.style.backgroundColor = '#00095991';
+            div1.style.backgroundColor = '';
+        }
+    }
+    
+    window.onload = function() {
+  var lastSubmission = getCookie('lastSubmission');
+  if (lastSubmission) {
+    lastSubmission = new Date(lastSubmission);
+    var now = new Date();
+    var diff = now - lastSubmission;
+    var threeDaysInMs = 3 * 24 * 60 * 60 * 1000;
+    
+    if (diff < threeDaysInMs) {
+      // Jika pengguna telah mengirim form dalam 3 hari terakhir, sembunyikan form dan tampilkan div
+      document.getElementById('formContainer').style.display = 'none';
+      document.getElementById('tampilanSetelahKirim').style.display = 'block';
+    }
+  }
+};
+
+function submitForm() {
+  var lastSubmission = getCookie('lastSubmission');
+  
+  if (lastSubmission) {
+    var lastSubmissionDate = new Date(lastSubmission);
+    var now = new Date();
+    var diff = now - lastSubmissionDate;
+    var threeDaysInMs = 3 * 24 * 60 * 60 * 1000;
+    
+    if (diff < threeDaysInMs) {
+      alert('Maaf, Anda hanya dapat mengirim form sekali dalam 3 hari.');
+      return;
+    }
+  }
+  
+  // Simpan informasi pengiriman terakhir di cookie
+  var now = new Date();
+  document.cookie = "lastSubmission=" + now + "; max-age=" + (3 * 24 * 60 * 60);
+  
+  // Sembunyikan form dan tampilkan div setelah pengiriman form
+  document.getElementById('formContainer').style.display = 'none';
+  document.getElementById('tampilanSetelahKirim').style.display = 'block';
+}
+
+function getCookie(name) {
+  var cookies = document.cookie.split(';');
+  for (var i = 0; i < cookies.length; i++) {
+    var cookie = cookies[i].trim();
+    if (cookie.indexOf(name) === 0) {
+      return cookie.substring(name.length + 1);
+    }
+  }
+  return null;
+}
+    </script>
+
+</body>
+</html>
